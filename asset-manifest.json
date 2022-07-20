@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/marzee/static/css/main.295c1218.css",
+    "main.js": "/marzee/static/js/main.7e381aa6.js",
+    "static/js/787.167cba44.chunk.js": "/marzee/static/js/787.167cba44.chunk.js",
+    "index.html": "/marzee/index.html",
+    "main.295c1218.css.map": "/marzee/static/css/main.295c1218.css.map",
+    "main.7e381aa6.js.map": "/marzee/static/js/main.7e381aa6.js.map",
+    "787.167cba44.chunk.js.map": "/marzee/static/js/787.167cba44.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.295c1218.css",
+    "static/js/main.7e381aa6.js"
+  ]
+}
