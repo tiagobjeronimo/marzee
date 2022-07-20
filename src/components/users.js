@@ -10,17 +10,15 @@ import Card from 'react-bootstrap/Card';
 function Users({data}){
   return(
     <Container className="my-4">
-      <Row>
+      <Row xs={4}>
         {data.map((user) =>
         <Col key={user.id}>
           <Card className="mb-4">
             <Card.Body>
-              <Card.Title><Link to={"/user/" + user.id} state={user}>{user.name}</Link></Card.Title>
+              <Card.Title as="h2"><Link to={"/user/" + user.id} state={user}>{user.name}</Link></Card.Title>
 
                 <address>
-                  Phone: <a href={"tel:" + user.phone}>{user.phone}</a><br />
-                  Email: <a href={"mailto:" + user.email}>{user.email}</a><br />
-                  Website: <a href={"//" + user.website} target="_blank" rel="noreferrer">{user.website}</a>
+                  <a href={"//" + user.website} target="_blank" rel="noreferrer">{user.website}</a>
                 </address>
                 
                 <Card.Text>{user.company.name}</Card.Text>

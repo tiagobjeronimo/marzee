@@ -13,39 +13,41 @@ function User(){
     
     return(
         <Container className="my-4">
-            <Link to="/">Voltar</Link>
+            <Link to="/">Back</Link>
 
             <Row className="mt-4">
                 <Col>
                     <Card>
                         <Card.Body>
-                            <Card.Title>{user.name}</Card.Title>
+                            <Card.Title as="h1" className="h2">{user.name}</Card.Title>
 
                             <Card.Text>
                                 Username: {user.username}<br />
                                 ID: {user.id}
                             </Card.Text>
                             
+                            <Card.Subtitle as="h2" className="h5">Contacts</Card.Subtitle>
+
                             <address>
                                 Phone: <a href={"tel:" + user.phone}>{user.phone}</a><br />
                                 Email: <a href={"mailto:" + user.email}>{user.email}</a><br />
                                 Website: <a href={"//" + user.website} target="_blank" rel="noreferrer">{user.website}</a>
                             </address>
                             
+                            <Card.Subtitle as="h2" className="h5">Address</Card.Subtitle>
+                            
                             <address>
-                                Street: {user.address.street}<br />
-                                Suite: {user.address.suite}<br />
-                                City: {user.address.city}<br />
-                                Zipcode: {user.address.zipcode}<br />
+                                {user.address.street}, {user.address.suite}<br />
+                                {user.address.zipcode} {user.address.city}<br />
                                 Lat: {user.address.geo.lat} / Lng: {user.address.geo.lng}
                             </address>
 
-                            <Card.Subtitle>Company</Card.Subtitle>
+                            <Card.Subtitle as="h2" className="h5">Company</Card.Subtitle>
                             
                             <Card.Text>
                                 {user.company.name}<br />
-                                {user.company.catchPhrase}<br />
-                                <small>{user.company.bs}</small>
+                                <span className="text-muted">{user.company.catchPhrase}</span><br />
+                                <span className="text-muted"><small>{user.company.bs}</small></span>
                             </Card.Text>
                         </Card.Body>
                     </Card>
